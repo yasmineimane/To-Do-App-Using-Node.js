@@ -1,0 +1,52 @@
+:root {
+    /* colors */
+    --bg: #827397;
+    --form-bg: #DBDFEA;
+    --btn-bg: #ACB1D6;
+
+    /* Font */
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: var(--bg);
+
+    & > form {
+        background: var(--form-bg);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+        height: 200px;
+        padding: 1rem;
+
+        & > input[type="text"] {
+            height: 30px;
+        }
+
+        & > input[type= "submit"] {
+            background: var(--btn-bg);
+            font-size: 0.9rem;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 0.5rem;
+            align-self: center;
+            cursor: pointer;
+        }
+        & > input[type="submit"]:hover {
+            background: var(--bg);
+            color: white;
+        }
+
+        & > a {
+            text-decoration: none;
+        }
+        & > a:hover {
+            color: var(--bg);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style/main.css")
+        link(rel="stylesheet", href="style/home.css")
+        title To Do App
+    body 
+        header 
+            nav 
+                h1 
+                    a(href="/")  Tasks
+        main
+            each item in data
+                article
+                    - id = item.id
+                    h3(class="text")= item.title || "No title"
+                    div
+                        a(href="/update/" + id) Update
+                        form(action="/delete/" + id, method="POST")
+                            button(type="submit") x
+        form(action="/add", method="post")
+            input(type="text", name="title", placeholder="Add a Task")
+            input(type="submit" value="+") 

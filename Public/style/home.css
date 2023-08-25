@@ -1,0 +1,139 @@
+:root {
+    /* Colors */
+    --bg: #B9B4C7;
+    --blue: #ECF8F9;
+    --dark-blue: #DDE6ED;
+
+    /* Font */
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+body {
+    background: var(--bg);
+    & > header {
+        height: auto;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        & > nav {
+            display: grid;
+            place-content: center;
+            padding: 1rem;
+            background: #5C5470;
+            & > h1 > a {
+                font-weight: var(--font-weight-bold);
+                font-size: 4rem;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    & > main {
+        display: grid;
+        place-content: center;
+        padding: 130px;
+        & > article {
+            background: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-weight: var(--font-weight-medium);
+            padding: 0.5rem;
+            width: 500px;
+            display: grid;
+            grid-template-columns: 404px 74px;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            & > form {
+                & > button {
+                    background: #10A19D;
+                    width: 20px;
+                    border-radius: 50%;
+                    border: none;
+                    color: white;
+                }
+            } 
+            
+            & > div {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0.5rem;
+                font-size: 0.8rem;
+                & > * {
+                    margin-right: 0.5rem;
+                }
+                & > a {
+                    text-decoration: none;
+                    color: #363062;
+                    font-size: 0.8rem;
+                }
+                & a:hover {
+                    color: #F3917FB3;
+                }
+                & > form > button {
+                    background: var(--bg);
+                    border: none;
+                    font-size: 0.7rem;
+                    padding: 0.1rem 0.2rem;
+                    border-radius: 0.3rem;
+                    color: white;
+                }
+                & > form > button:hover {
+                    background: #C70039;
+                }
+            }
+        }
+        & > article:hover {
+            background: var(--blue);
+        }
+    }
+    & > form {
+        position: fixed;
+        bottom: 30px;
+        left: 390px;
+        border: none;
+        display: flex;
+        & > input[type="text"]  {
+            width: 450px;
+            height: 35px;
+            background: var(--dark-blue);
+            border: none;
+            border-radius: 0.4rem;
+            padding: 1rem;
+        }
+        & > input[type="text"]:hover {
+            background: var(--blue);
+        }
+        & > input[type="text"]::placeholder {
+            color: black;
+            font-weight: var(--font-weight-bold);
+            font-size: 13px;
+        }
+        & > input[type="submit"] {
+            width: 40px;
+            margin-left: 10px;
+            background: #E9D5DA;
+            border: none;
+            border-radius: 0.4rem;
+            font-weight: var(--font-weight-bold);
+            font-size: 1.8rem;
+            color: var(--bg);
+        }
+        & > input[type="submit"]:hover {
+            background: var(--dark-blue);
+        }
+    }
+}
+
+.checked-btn {
+    background: white;
+}
+
+.checked-text {
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: #898AA6;
+}
+
